@@ -28,16 +28,11 @@
                     <tr class="border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600">
                         <td class="py-3 px-6 text-left whitespace-nowrap">{{ $jobs->firstItem() + $index }}</td>
                         <td class="py-3 px-6 text-left">
-                            {{-- AWAL PERBAIKAN --}}
                             @if($job->image)
-                                {{-- Gunakan URL langsung dari database yang sudah berisi link Cloudinary --}}
                                 <img src="{{ $job->image }}" alt="{{ $job->title }}" class="w-16 h-16 object-cover rounded">
                             @else
-                                <div class="w-16 h-16 flex items-center justify-center bg-gray-200 dark:bg-gray-700 rounded text-xs text-gray-500">
-                                    No Img
-                                </div>
+                                <span class="text-xs italic">Tidak ada gambar</span>
                             @endif
-                            {{-- AKHIR PERBAIKAN --}}
                         </td>
                         <td class="py-3 px-6 text-left">{{ $job->title }}</td>
                         <td class="py-3 px-6 text-left">{{ $job->company }}</td>
