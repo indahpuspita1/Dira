@@ -98,8 +98,8 @@ class JobController extends Controller
             'image' => $uploadedFileUrl,
         ]);
 
-        if (!empty($validatedData['disability_categories'])) {
-            $job->disabilityCategories()->sync($validatedData['disability_categories']);
+        if ($job && isset($validatedData['disability_categories']) && is_array($validatedData['disability_categories'])) {
+    $job->disabilityCategories()->sync($validatedData['disability_categories']);
         } else {
             $job->disabilityCategories()->detach();
         }
