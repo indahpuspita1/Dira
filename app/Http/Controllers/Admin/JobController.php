@@ -8,6 +8,7 @@ use App\Models\DisabilityCategory;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage; // Untuk menghapus gambar jika diperlukan
+use CloudinaryLabs\CloudinaryLaravel\Facades\Cloudinary;
 
 class JobController extends Controller
 {

@@ -29,7 +29,7 @@
                         <td class="py-3 px-6 text-left whitespace-nowrap">{{ $jobs->firstItem() + $index }}</td>
                         <td class="py-3 px-6 text-left">
                             @if($job->image)
-                                <img src="{{ asset('storage/' . $job->image) }}" alt="{{ $job->title }}" class="w-16 h-16 object-cover rounded">
+                                <img src="{{ $job->image }}" alt="{{ $job->title }}" class="w-16 h-16 object-cover rounded">
                             @else
                                 <span class="text-xs italic">Tidak ada gambar</span>
                             @endif

@@ -8,6 +8,7 @@ namespace App\Http\Controllers\Admin;
     use Illuminate\Http\Request;
     use Illuminate\Support\Facades\Auth;
     use Illuminate\Support\Facades\Storage;
+    use CloudinaryLabs\CloudinaryLaravel\Facades\Cloudinary;
 
     class ArticleController extends Controller
     {
