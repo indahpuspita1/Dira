@@ -78,14 +78,12 @@ class JobController extends Controller
             'disability_categories.*.exists' => 'Kategori disabilitas yang dipilih tidak valid.'
         ]);
 
-         $imageUrl = null;
+        // 2. Handle upload gambar
+        $imagePath = null;
         if ($request->hasFile('image')) {
-            // UPLOAD KE CLOUDINARY
-            $uploadedFileUrl = Cloudinary::upload($request->file('image')->getRealPath(), [
-                'folder' => 'dira-jobs/job' // Folder di Cloudinary
-            ])->getSecurePath();
-
-            $imageUrl = $uploadedFileUrl;
+            // Simpan gambar ke folder 'public/job_images'
+            // Nama file akan di-generate otomatis agar unik
+            $imagePath = $request->file('image')->store('job_images', 'public');
         }
 
         // 3. Simpan data lowongan ke database
@@ -96,7 +94,7 @@ class JobController extends Controller
             'description' => $validatedData['description'],
             'location' => $validatedData['location'],
             'deadline' => $validatedData['deadline'],
-            'image' => $imageUrl,
+            'image' => $imagePath,
             // admin_id akan otomatis terisi oleh relasi postedJobs()
         ]);
 
