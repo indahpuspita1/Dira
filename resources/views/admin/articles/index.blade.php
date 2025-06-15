@@ -29,7 +29,7 @@
                             <td class="py-3 px-6 text-left whitespace-nowrap">{{ $articles->firstItem() + $index }}</td>
                             <td class="py-3 px-6 text-left">
                                 @if($article->image)
-                                    <img src="{{ $article->image }}" alt="{{ $article->title }}" class="w-16 h-16 object-cover rounded">
+                                    <img src="{{ asset('storage/' . $article->image) }}" alt="{{ $article->title }}" class="w-16 h-16 object-cover rounded">
                                 @else
                                     <span class="text-xs italic">Tidak ada gambar</span>
                                 @endif
