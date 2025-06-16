@@ -38,7 +38,7 @@ class WorkshopController extends Controller
             'description' => 'required|string',
             'date_time' => 'required|date', // Bisa juga 'datetime-local' jika inputnya begitu
             'location_or_link' => 'required|string|max:255',
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:10240',
             'price' => 'required|numeric|min:0',
         ], [
             'title.required' => 'Judul workshop wajib diisi.',

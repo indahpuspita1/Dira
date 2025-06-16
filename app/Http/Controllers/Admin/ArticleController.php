@@ -44,7 +44,7 @@ namespace App\Http\Controllers\Admin;
                 'image.required' => 'Gambar artikel wajib diupload.',
                 'image.image' => 'File yang diupload harus berupa gambar.',
                 'image.mimes' => 'Format gambar harus jpeg, png, jpg, gif, atau svg.',
-                'image.max' => 'Ukuran gambar maksimal 2MB.',
+                'image.max' => 'Ukuran gambar maksimal 10MB.',
             ]);
 
             $imagePath = null;

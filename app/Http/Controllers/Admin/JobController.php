@@ -72,7 +72,7 @@ class JobController extends Controller
             'image.required' => 'Gambar lowongan wajib diupload.',
             'image.image' => 'File yang diupload harus berupa gambar.',
             'image.mimes' => 'Format gambar harus jpeg, png, jpg, gif, atau svg.',
-            'image.max' => 'Ukuran gambar maksimal 2MB.',
+            'image.max' => 'Ukuran gambar maksimal 10MB.',
             'disability_categories.required' => 'Pilih minimal satu kategori disabilitas.',
             'disability_categories.*.exists' => 'Kategori disabilitas yang dipilih tidak valid.'
         ]);
