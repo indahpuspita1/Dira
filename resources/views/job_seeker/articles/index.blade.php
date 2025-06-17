@@ -40,7 +40,7 @@
                     <div class="bg-white dark:bg-slate-800 rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 ease-in-out flex flex-col">
                         <a href="{{ route('articles.show', $article->id) }}" class="block">
                             @if($article->image)
-                                <img src="{{ $article->image }}" alt="{{ $article->title }}"
+                                <img src="{{ asset('storage/' . $article->image) }}" alt="{{ $article->title }}"
                                      class="w-full h-48 object-cover">
                             @else
                                 <div class="w-full h-48 bg-slate-200 dark:bg-slate-700 flex items-center justify-center">

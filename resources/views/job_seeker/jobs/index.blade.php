@@ -60,7 +60,7 @@
                     <div class="bg-white dark:bg-slate-800 rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 ease-in-out flex flex-col">
                         <div class="relative">
                             @if($job->image)
-                                <img src="{{ $job->image }}" alt="Gambar {{ $job->title }}"
+                                <img src="{{ asset('storage/' . $job->image) }}" alt="Gambar {{ $job->title }}"
                                      class="w-full h-48 object-cover">
                             @else
                                 <div class="w-full h-48 bg-slate-200 dark:bg-slate-700 flex items-center justify-center">

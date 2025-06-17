@@ -28,7 +28,7 @@
                         <td class="py-3 px-6 text-left">{{ $workshops->firstItem() + $index }}</td>
                         <td class="py-3 px-6 text-left">
                             @if($workshop->image)
-                                <img src="{{ $workshop->image }}" alt="{{ $workshop->title }}" class="w-16 h-16 object-cover rounded">
+                                <img src="{{ asset('storage/' . $workshop->image) }}" alt="{{ $workshop->title }}" class="w-16 h-16 object-cover rounded">
                             @else N/A @endif
                         </td>
                         <td class="py-3 px-6 text-left">{{ Str::limit($workshop->title, 40) }}</td>

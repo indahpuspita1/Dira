@@ -34,7 +34,7 @@
                     <div class="bg-white dark:bg-slate-800 rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 ease-in-out flex flex-col">
                         <a href="{{ route('workshops.show', $workshop->id) }}" class="block">
                             @if($workshop->image)
-                                <img src="{{ $workshop->image }}" alt="{{ $workshop->title }}"
+                                <img src="{{ asset('storage/' . $workshop->image) }}" alt="{{ $workshop->title }}"
                                      class="w-full h-48 object-cover">
                             @else
                                 <div class="w-full h-48 bg-slate-200 dark:bg-slate-700 flex items-center justify-center">
